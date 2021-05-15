@@ -200,16 +200,17 @@ main {
 .white_popup_block .wrapper .user-dates input{
     width: 100%;
     height: 48px;
-    font-style: italic;
-    padding: 16px 15px 16px 15px;
-    margin-bottom: 10px;
-    font-size: 14px;
+    font-weight: bold;
+    font-size: 16px;
     line-height: 28px;
     color: #586175;
+    padding: 16px 15px 16px 15px;
+    margin-bottom: 10px;
 }
 .white_popup_block .wrapper .user-dates input::placeholder{
     font-size: 14px;
     line-height: 28px;
+    font-weight: 400;
     color: #586175;
     font-style: italic;
 }
