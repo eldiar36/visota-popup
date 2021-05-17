@@ -3,14 +3,22 @@ const datepicker = new Datepicker(elem, {
     autohide: true,
     disableTouchKeyboard: true,
     format: 'dd/mm/yyyy',
-    today: true,
+
     l: "ru",
     allowOneSidedRange: true,
     nextArrow: '>',
     prevArrow: '<',
+    todayHighlight: true,
+    todayBtnMode:true,
+    todayMode:true,
     weekStart: 1,
+
 });
 
+$('.select__item').on('click', function() {
+    $(this).addClass('active')
+        .siblings().removeClass('active');
+});
 
 jQuery(($) => {
     $('.select').on('click', '.select__head', function () {
@@ -108,11 +116,9 @@ function checkFilled() {
     let inputVal = document.getElementById("promo-input");
         if (inputVal.value === "") {
             inputVal.style.background = "none";
-            inputVal.style.border = "none";
         }
         else{
             inputVal.style.background = "#ffffff";
-            inputVal.style.border = "1px solid #FF1B80";
         }
 }
 
