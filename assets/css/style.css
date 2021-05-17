@@ -275,7 +275,7 @@ main {
     background: none;
     border: none;
     width: 37px;
-    height: 15px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -283,7 +283,7 @@ main {
     text-align: center;
     font-weight: bold;
     font-size: 16px;
-    line-height: 28px;
+    
 }
 .white_popup_block  .quantity_inner button {
     background: none;
