@@ -115,6 +115,7 @@ main {
     justify-content: space-between;
 }
 .white_popup_block {
+    position: relative;
     margin: 0 auto;
     width: 900px;
     height: auto;
@@ -138,9 +139,9 @@ main {
     width:24px;
     height: 24px;
     position: absolute;
-    right: 10px;
-    top: 10px;
-    background: url("../images/close.svg")no-repeat;
+    right: 15px;
+    top: 15px;
+    background: url("../images/BACK.svg")no-repeat;
     background-size: cover;
     font-size: 0;
 }
@@ -283,7 +284,7 @@ main {
     text-align: center;
     font-weight: bold;
     font-size: 16px;
-    
+
 }
 .white_popup_block  .quantity_inner button {
     background: none;
