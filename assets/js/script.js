@@ -1,19 +1,4 @@
-const elem = document.querySelector('input[name="datepicker"]');
-const datepicker = new Datepicker(elem, {
-    autohide: true,
-    disableTouchKeyboard: true,
-    format: 'dd/mm/yyyy',
 
-    l: "ru",
-    allowOneSidedRange: true,
-    nextArrow: '>',
-    prevArrow: '<',
-    todayHighlight: true,
-    todayBtnMode:true,
-    todayMode:true,
-    weekStart: 1,
-
-});
 
 $('.select__item').on('click', function() {
     $(this).addClass('active')
@@ -47,50 +32,13 @@ jQuery(($) => {
         }
     });
 });
-
-/*function PlusMinus() {
-    let minusBtn = document.getElementsByClassName("bt_minus"),
-        plusBtn = document.getElementsByClassName("bt_plus"),
-        numberPlace = document.getElementsByClassName("quantity"),
-        parentItem = document.getElementsByClassName("inner"),
-        number = 0, /// number value
-        min = 0, /// min number
-        max = 30; /// max number
-
-    for (let i = 0; i < minusBtn.length; i++) minusBtn[i].onclick = function () {
-        if (number > min) {
-            number = number - 1; /// Minus 1 of the number
-            numberPlace[i].value = number; /// Display the value in place of the number
-        }
-        if (number === min) {
-            parentItem[i].classList.remove('pink')
-        }
-    }
-
-    for (let j = 0; j < plusBtn.length; j++) plusBtn[j].onclick = function () {
-        if (number < max) {
-            number = number + 1;
-            numberPlace[j].value = number; /// Display the value in place of the number
-            parentItem[j].classList.add('pink')
-        }
-    }
-}
-
-PlusMinus();*/
-let  tickedColor = document.getElementsByClassName("ticket-color")
-console.log(tickedColor)
 // Убавляем кол-во по клику
 $('.quantity_inner .bt_minus').click(function () {
     let $input = $(this).parent().find('.quantity');
     let count = parseInt($input.val()) - 1;
     count = count < 0 ? 0 : count;
     $input.val(count);
-
-
-
-
 });
-
 // Прибавляем кол-во по клику
 $('.quantity_inner .bt_plus').click(function () {
     let $input = $(this).parent().find('.quantity');
@@ -99,7 +47,6 @@ $('.quantity_inner .bt_plus').click(function () {
     $input.val(parseInt(count));
     
 });
-
 // Убираем все лишнее и невозможное при изменении поля
 $('.quantity_inner .quantity').bind("change keyup input click", function () {
     if (this.value.match(/[^0-9]/g)) {
@@ -121,6 +68,5 @@ function checkFilled() {
             inputVal.style.background = "#ffffff";
         }
 }
-
 checkFilled();
 
